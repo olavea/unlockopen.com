@@ -14,8 +14,11 @@
   },
   "dependencies": {
     "gatsby": "^2.15.35",
+    "modularscale": "^2.0.1",
     "react": "^16.10.2",
-    "react-dom": "^16.10.2"
+    "react-dom": "^16.10.2",
+    "typography": "^0.16.19",
+    "typography-breakpoint-constants": "^0.16.19"
   },
   "devDependencies": {
     "prettier": "^1.18.2"
