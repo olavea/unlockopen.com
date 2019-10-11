@@ -18,32 +18,31 @@ class BasicLayout extends React.Component {
           <meta charSet="utf-8" />
         </Helmet>
         <Header />
+
+        <div
+          style={{
+            marginLeft: "auto",
+            marginRight: "auto",
+            maxWidth: rhythm(24),
+            padding: `${rhythm(1.5)} ${rhythm(3 / 4)} ${rhythm(1)} ${rhythm(
+              3 / 4
+            )}`,
+          }}
+        >
+          {children}
+        </div>
+        <Footer
+          style={{
+            marginLeft: "auto",
+            marginRight: "auto",
+            maxWidth: rhythm(24),
+            padding: `${rhythm(1)} ${rhythm(3 / 4)} 0 ${rhythm(3 / 4)}`,
+          }}
+        />
+        <ColorLine />
       </div>
     )
   }
 }
 
 export default BasicLayout
-
-// <div
-//   style={{
-//     marginLeft: "auto",
-//     marginRight: "auto",
-//     maxWidth: rhythm(24),
-//     padding: `${rhythm(1.5)} ${rhythm(3 / 4)} ${rhythm(1)} ${rhythm(
-//       3 / 4
-//     )}`,
-//   }}
-// >
-//   {children}
-// </div>
-
-//         <Footer
-//           style={{
-//             marginLeft: "auto",
-//             marginRight: "auto",
-//             maxWidth: rhythm(24),
-//             padding: `${rhythm(1)} ${rhythm(3 / 4)} 0 ${rhythm(3 / 4)}`,
-//           }}
-//         />
-//         <ColorLine />
