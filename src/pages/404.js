@@ -1,7 +1,6 @@
-import React from "react"
-import BasicLayout from "../components/BasicLayout"
-import Helmet from "react-helmet"
-// Why import Helmet?
+import React from 'react'
+import BasicLayout from '../components/BasicLayout'
+import Helmet from 'react-helmet'
 
 const NotFoundPage = () => (
   <BasicLayout>
