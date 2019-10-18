@@ -1,8 +1,8 @@
-import React from "react"
+import React from "react";
 //import profilePic from './profile-pic.jpg'
 // import Link from "gatsby-link"
-import Logo from "./brand/Logo"
-import { rhythm } from "../utils/typography"
+import Logo from "./brand/Logo";
+import { rhythm } from "../utils/typography";
 
 class Header extends React.Component {
   render() {
@@ -12,11 +12,11 @@ class Header extends React.Component {
           <Logo size={1} to={"/"} />
         </h1>
       </header>
-    )
+    );
   }
 }
 
-export default Header
+export default Header;
 
 /*
         <header style={{

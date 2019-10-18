@@ -1,11 +1,11 @@
-import React from "react"
-import Helmet from "react-helmet"
+import React from "react";
+import Helmet from "react-helmet";
 //import Hero from './Hero'
-import Header from "./Header"
-import Footer from "./Footer"
-import ColorLine from "./ColorLine"
+import Header from "./Header";
+import Footer from "./Footer";
+import ColorLine from "./ColorLine";
 
-import { rhythm, scale } from "../utils/typography"
+import { rhythm, scale } from "../utils/typography";
 
 const BasicLayout = ({ children }) => {
   return (
@@ -38,6 +38,6 @@ const BasicLayout = ({ children }) => {
       />
       <ColorLine />
     </div>
-  )
-}
-export default BasicLayout
+  );
+};
+export default BasicLayout;

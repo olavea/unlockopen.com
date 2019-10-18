@@ -1,6 +1,6 @@
-import React from 'react'
-import Link from 'gatsby-link'
-import { rhythm } from '../../utils/typography'
+import React from "react";
+import Link from "gatsby-link";
+import { rhythm } from "../../utils/typography";
 
 class Font extends React.Component {
   render() {
@@ -9,25 +9,38 @@ class Font extends React.Component {
     const fontFamily = this.props.fontFamily;
     const fontColor = this.props.fontColor;
     const fontWeight = this.props.fontWeight;
-    const CHARACTERS = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz1234567890‘?’“!”(%)[#]{@}/&\<-+÷×=>®©$€£¥¢:;,.*)"
+    const CHARACTERS =
+      "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz1234567890‘?’“!”(%)[#]{@}/&<-+÷×=>®©$€£¥¢:;,.*)";
     return (
-        <div style={{
-            display: "grid",
-            columnGap: rhythm(1/2),
-            gridTemplateColumns:  '25% 75%',
-        }}>
-          <p>{name}<br /><small>{fontFamily}<br />{fontWeight}, {fontColor}</small></p>
-          <p style={{
+      <div
+        style={{
+          display: "grid",
+          columnGap: rhythm(1 / 2),
+          gridTemplateColumns: "25% 75%",
+        }}
+      >
+        <p>
+          {name}
+          <br />
+          <small>
+            {fontFamily}
+            <br />
+            {fontWeight}, {fontColor}
+          </small>
+        </p>
+        <p
+          style={{
             ...style,
             fontStyle: fontFamily,
             color: fontColor,
-            fontWeight: fontWeight
-          }}>{CHARACTERS}</p>
-          
-        </div>
-
-    )
+            fontWeight: fontWeight,
+          }}
+        >
+          {CHARACTERS}
+        </p>
+      </div>
+    );
   }
 }
 
-export default Font
+export default Font;

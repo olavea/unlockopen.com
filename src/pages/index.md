@@ -10,9 +10,9 @@ And so we hear of resource-strapped projects, security concerns, maintainer burn
 
 But what initially seems like a tragedy of the commons is actually a **gigantic opportunity**. There is more to contributing to open source than "doing the right thing" or "paying it forward."
 
-Why do you think Microsoft spent $7.5B on GitHub, beating Google to the punch?
+Why do you think Microsoft spent \$7.5B on GitHub, beating Google to the punch?
 
-Or why did IBM buy Red Hat for $34B?
+Or why did IBM buy Red Hat for \$34B?
 
 Contributing to open source has **strategic benefits** that tech giants are well aware of.
 
@@ -31,4 +31,3 @@ Thirdly, it is increasingly demonstrated that teams that contribute to open sour
 At the individual level, engineers improve both their technical abilities and their soft skills. They build external networks they can tap into to help them solve work-related problems or recruit new team members. At the team level, this translates into increased efficiencies, with **open source contributing teams twice(!) as efficient as freeloading ones**, according to new research by Harvard Business School. And at the organisation level, this leads to better public perception, improved company culture, higher employee morale, and lower churn.
 
 What's not to like?
-

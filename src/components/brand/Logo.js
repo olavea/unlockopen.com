@@ -1,30 +1,30 @@
-import React from "react"
-import Link from "gatsby-link"
-import Wordmark from "./Wordmark"
-import Logomark from "./Logomark"
-import { rhythm } from "../../utils/typography"
-import * as brand from "../../utils/brand"
+import React from "react";
+import Link from "gatsby-link";
+import Wordmark from "./Wordmark";
+import Logomark from "./Logomark";
+import { rhythm } from "../../utils/typography";
+import * as brand from "../../utils/brand";
 
 class Logo extends React.Component {
   render() {
-    const to = this.props.to
-    const size = this.props.size || 1
+    const to = this.props.to;
+    const size = this.props.size || 1;
     const colors = [
       brand.WORDMARK_FONT_COLOR_UNLOCK,
       brand.WORDMARK_FONT_COLOR_OPEN,
-    ]
+    ];
     if (this.props.colors) {
-      colors[0] = this.props.colors[0] || colors[0]
-      colors[1] = this.props.colors[1] || colors[1]
+      colors[0] = this.props.colors[0] || colors[0];
+      colors[1] = this.props.colors[1] || colors[1];
     } else if (this.props.color) {
-      colors[0] = this.props.color
-      colors[1] = this.props.color
+      colors[0] = this.props.color;
+      colors[1] = this.props.color;
     }
 
     const style = {
       ...this.props.style,
       display: "flex",
-    }
+    };
 
     const lm = (
       <Logomark
@@ -34,8 +34,8 @@ class Logo extends React.Component {
           paddingBottom: `calc(${rhythm(3 / 10)} - 5px)`,
         }}
       />
-    )
-    const wm = <Wordmark size={size} style={{ fontSize: `${size}rem` }} />
+    );
+    const wm = <Wordmark size={size} style={{ fontSize: `${size}rem` }} />;
     return to ? (
       <Link
         style={{
@@ -51,11 +51,11 @@ class Logo extends React.Component {
       <span style={style}>
         {lm} {wm}
       </span>
-    )
+    );
   }
 }
 
-export default Logo
+export default Logo;
 
 /*"header": {
       display: "grid",

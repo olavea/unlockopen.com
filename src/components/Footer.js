@@ -1,10 +1,10 @@
-import React from "react"
-import Link from "gatsby-link"
-import { rhythm } from "../utils/typography"
+import React from "react";
+import Link from "gatsby-link";
+import { rhythm } from "../utils/typography";
 
 class Footer extends React.Component {
   render() {
-    const style = this.props.style
+    const style = this.props.style;
     return (
       <footer style={style}>
         <hr />
@@ -12,8 +12,8 @@ class Footer extends React.Component {
           Copyright 2009—2019 UnlockOpen LLC
         </p>
       </footer>
-    )
+    );
   }
 }
 
-export default Footer
+export default Footer;

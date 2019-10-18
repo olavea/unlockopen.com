@@ -1,22 +1,22 @@
-import React from 'react'
+import React from "react";
 
 // Import typefaces
-import 'typeface-montserrat'
-import 'typeface-merriweather'
-import get from 'lodash/get'
-import PropTypes from 'prop-types';
+import "typeface-montserrat";
+import "typeface-merriweather";
+import get from "lodash/get";
+import PropTypes from "prop-types";
 
-import profilePic from './profile-pic.jpg'
-import { rhythm } from '../utils/typography'
+import profilePic from "./profile-pic.jpg";
+import { rhythm } from "../utils/typography";
 
 class ArticleTitle extends React.Component {
   render() {
     const author = this.props.author;
-      
+
     return (
       <div
         style={{
-          display: 'flex',
+          display: "flex",
           marginBottom: rhythm(2.5),
         }}
       >
@@ -32,16 +32,16 @@ class ArticleTitle extends React.Component {
         />
         <p>
           Written by <strong>{author}</strong> who lives and works in San
-          Francisco building useful things.{' '}
+          Francisco building useful things.{" "}
           <a href="https://twitter.com/kylemathews">
             You should follow him on Twitter
           </a>
         </p>
       </div>
-    )
+    );
   }
 }
 Bio.propTypes = {
-  author: PropTypes.string.isRequired
+  author: PropTypes.string.isRequired,
 };
-export default Bio
+export default Bio;

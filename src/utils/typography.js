@@ -1,6 +1,6 @@
-import Typography from "typography"
-import ms from "modularscale"
-import { MIN_DEFAULT_MEDIA_QUERY } from "typography-breakpoint-constants"
+import Typography from "typography";
+import ms from "modularscale";
+import { MIN_DEFAULT_MEDIA_QUERY } from "typography-breakpoint-constants";
 import {
   lighten,
   COLOR_PRIMARY,
@@ -8,7 +8,7 @@ import {
   COLOR_TERTIARY,
   COLOR_QUARTERLY,
   COLOR_BACKGROUND,
-} from "./brand"
+} from "./brand";
 
 //const newFontSize = (value, ratio) => {
 //    const baseFont = options.baseFontSize.slice(0, -2)
@@ -57,26 +57,26 @@ const theme = {
   bodyWeight: 300,
   boldWeight: 700,
   overrideStyles: ({ adjustFontSizeTo, scale, rhythm }, options) => {
-    const textify = arr => `${JSON.stringify(arr[0])}, ${arr[1]}`
-    const small = scale(-1 / 5)
-    const xSmall = scale(-1.5 / 5)
-    const bodyFont = textify(options.bodyFontFamily)
-    const bodySerifFont = textify(["Merriweather", "serif"])
+    const textify = arr => `${JSON.stringify(arr[0])}, ${arr[1]}`;
+    const small = scale(-1 / 5);
+    const xSmall = scale(-1.5 / 5);
+    const bodyFont = textify(options.bodyFontFamily);
+    const bodySerifFont = textify(["Merriweather", "serif"]);
     const aside = {
       fontFamily: bodyFont,
       fontWeight: options.bodyWeight,
       fontStyle: "italic",
-    }
+    };
     const alternate = {
       ...adjustFontSizeTo(small),
       fontFamily: bodySerifFont,
       fontWeight: 400,
-    }
+    };
     const body = {
       fontFamily: bodyFont,
       fontWeight: options.bodyWeight,
       fontStyle: "normal",
-    }
+    };
 
     return {
       h1: {
@@ -233,15 +233,15 @@ const theme = {
           paddingRight: rhythm(1),
         },
       },
-    }
+    };
   },
-}
+};
 
-const typography = new Typography(theme)
+const typography = new Typography(theme);
 
 // Hot reload typography in development.
 if (process.env.NODE_ENV !== "production") {
-  typography.injectStyles()
+  typography.injectStyles();
 }
 
-export default typography
+export default typography;

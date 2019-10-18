@@ -1,12 +1,12 @@
-import React from "react"
-import { rhythm } from "../../utils/typography"
-import * as brand from "../../utils/brand"
+import React from "react";
+import { rhythm } from "../../utils/typography";
+import * as brand from "../../utils/brand";
 
 class Logomark extends React.Component {
   render() {
-    const color = this.props.color
-    const style = this.props.style
-    const size = rhythm(this.props.size || 1)
+    const color = this.props.color;
+    const style = this.props.style;
+    const size = rhythm(this.props.size || 1);
     return (
       <svg
         style={{
@@ -38,8 +38,8 @@ class Logomark extends React.Component {
           />
         </g>
       </svg>
-    )
+    );
   }
 }
 
-export default Logomark
+export default Logomark;

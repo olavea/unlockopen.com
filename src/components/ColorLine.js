@@ -1,11 +1,11 @@
-import React from "react"
-import Link from "gatsby-link"
-import { COLOR_LOGO } from "../utils/brand"
-import { rhythm } from "../utils/typography"
+import React from "react";
+import Link from "gatsby-link";
+import { COLOR_LOGO } from "../utils/brand";
+import { rhythm } from "../utils/typography";
 
 class ColorLine extends React.Component {
   render() {
-    const color = this.props.color
+    const color = this.props.color;
     if (color) {
       return (
         <div
@@ -15,7 +15,7 @@ class ColorLine extends React.Component {
             backgroundColor: color,
           }}
         />
-      )
+      );
     }
     return (
       <div
@@ -31,8 +31,8 @@ class ColorLine extends React.Component {
         <div style={{ backgroundColor: COLOR_LOGO[2] }} />
         <div style={{ backgroundColor: COLOR_LOGO[3] }} />
       </div>
-    )
+    );
   }
 }
 
-export default ColorLine
+export default ColorLine;

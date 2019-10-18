@@ -1,22 +1,22 @@
-import React from "react"
-import Link from "gatsby-link"
-import { rhythm, scale } from "../../utils/typography"
-import * as brand from "../../utils/brand"
+import React from "react";
+import Link from "gatsby-link";
+import { rhythm, scale } from "../../utils/typography";
+import * as brand from "../../utils/brand";
 
 class Wordmark extends React.Component {
   render() {
-    const size = this.props.size || 1
-    const to = this.props.to
+    const size = this.props.size || 1;
+    const to = this.props.to;
     const colors = [
       brand.WORDMARK_FONT_COLOR_UNLOCK,
       brand.WORDMARK_FONT_COLOR_OPEN,
-    ]
+    ];
     if (this.props.colors) {
-      colors[0] = this.props.colors[0] || colors[0]
-      colors[1] = this.props.colors[1] || colors[1]
+      colors[0] = this.props.colors[0] || colors[0];
+      colors[1] = this.props.colors[1] || colors[1];
     } else if (this.props.color) {
-      colors[0] = this.props.color
-      colors[1] = this.props.color
+      colors[0] = this.props.color;
+      colors[1] = this.props.color;
     }
     const style = {
       ...scale(size - 1),
@@ -24,7 +24,7 @@ class Wordmark extends React.Component {
       ...this.props.style,
       fontFamily: brand.WORDMARK_FONT_FAMILY,
       textDecoration: "none",
-    }
+    };
 
     const name = [
       <span
@@ -45,7 +45,7 @@ class Wordmark extends React.Component {
       >
         Open
       </span>,
-    ]
+    ];
     return to ? (
       <Link
         style={{
@@ -59,11 +59,11 @@ class Wordmark extends React.Component {
       </Link>
     ) : (
       <span style={style}>{name}</span>
-    )
+    );
   }
 }
 
-export default Wordmark
+export default Wordmark;
 
 /*"header": {
       display: "grid",

@@ -1,18 +1,18 @@
-import React from "react"
-import Helmet from "react-helmet"
-import Link from "gatsby-link"
-import get from "lodash/get"
+import React from "react";
+import Helmet from "react-helmet";
+import Link from "gatsby-link";
+import get from "lodash/get";
 
-import Layout from "../components/Layout"
-import ArticleReaders from "../components/ArticleReaders"
-import { rhythm, scale } from "../utils/typography"
+import Layout from "../components/Layout";
+import ArticleReaders from "../components/ArticleReaders";
+import { rhythm, scale } from "../utils/typography";
 
 const JsonLd = ({ data }) => (
   <script
     type="application/ld+json"
     dangerouslySetInnerHTML={{ __html: JSON.stringify(data) }}
   />
-)
+);
 
 const data = {
   "@context": "http://schema.org",
@@ -20,13 +20,13 @@ const data = {
   headline: "Open-source framework for publishing content",
   datePublished: "2015-10-07T12:02:41Z",
   image: ["logo.jpg"],
-}
+};
 
 class BlogPostTemplate extends React.Component {
   render() {
-    const post = this.props.data.markdownRemark
-    const siteTitle = get(this.props, "data.site.siteMetadata.title")
-    const { previous, next } = this.props.pathContext
+    const post = this.props.data.markdownRemark;
+    const siteTitle = get(this.props, "data.site.siteMetadata.title");
+    const { previous, next } = this.props.pathContext;
     return (
       <Layout bio={post.fields.bio}>
         <Helmet
@@ -50,11 +50,11 @@ class BlogPostTemplate extends React.Component {
           dangerouslySetInnerHTML={{ __html: post.html }}
         />
       </Layout>
-    )
+    );
   }
 }
 
-export default BlogPostTemplate
+export default BlogPostTemplate;
 
 export const pageQuery = graphql`
   query BlogPostBySlug($slug: String!) {
@@ -68,7 +68,7 @@ export const pageQuery = graphql`
       html
     }
   }
-`
+`;
 // (fields: { slug: { eq: $slug } })
 // fields {
 //   title

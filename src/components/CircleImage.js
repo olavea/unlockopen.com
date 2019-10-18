@@ -1,5 +1,5 @@
-import React from 'react'
-import { rhythm } from '../utils/typography'
+import React from "react";
+import { rhythm } from "../utils/typography";
 
 class CircleImage extends React.Component {
   render() {
@@ -14,10 +14,11 @@ class CircleImage extends React.Component {
           ...style,
           height: size,
           width: size,
-          position: "relative"
+          position: "relative",
         }}
       >
-        <img className="circle"
+        <img
+          className="circle"
           src={src}
           alt={alt}
           style={{
@@ -26,21 +27,24 @@ class CircleImage extends React.Component {
             width: size,
             height: size,
             borderRadius: "100%",
-        }}/>
-        <div style={{
-          position: "absolute",
-          width: "100%",
-          height: "100%",
-          MozBoxShadow:  boxShadow,
-          WebkitBoxShadow: boxShadow,
-          boxShadow: boxShadow,
-          borderRadius: "100%",
-          top: 0,
-          left: 0,
-        }}/>
-    </div>
-    )
+          }}
+        />
+        <div
+          style={{
+            position: "absolute",
+            width: "100%",
+            height: "100%",
+            MozBoxShadow: boxShadow,
+            WebkitBoxShadow: boxShadow,
+            boxShadow: boxShadow,
+            borderRadius: "100%",
+            top: 0,
+            left: 0,
+          }}
+        />
+      </div>
+    );
   }
 }
 
-export default CircleImage
+export default CircleImage;
