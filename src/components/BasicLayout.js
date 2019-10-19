@@ -5,7 +5,7 @@ import Header from "./Header";
 import Footer from "./Footer";
 import ColorLine from "./ColorLine";
 
-import { rhythm, scale } from "../utils/typography";
+import { rhythm } from "../utils/typography";
 
 const BasicLayout = ({ children }) => {
   return (

@@ -2,7 +2,7 @@ import React from "react";
 import profilePic from "./IMG_3420.jpg";
 //import bio from './bio.md'
 import { rhythm } from "../../utils/typography";
-import { MIN_DEFAULT_MEDIA_QUERY } from "typography-breakpoint-constants";
+// import { MIN_DEFAULT_MEDIA_QUERY } from "typography-breakpoint-constants";
 import CircleImage from "../CircleImage";
 
 class Bio extends React.Component {
