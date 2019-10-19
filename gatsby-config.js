@@ -1,3 +1,4 @@
+// What is this?
 require("dotenv").config();
 
 module.exports = {
@@ -10,6 +11,14 @@ module.exports = {
   },
 
   plugins: [
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        name: `src`,
+        path: `${__dirname}/src/`,
+      },
+    },
+
     `gatsby-plugin-sharp`,
     {
       resolve: `gatsby-transformer-remark`,
