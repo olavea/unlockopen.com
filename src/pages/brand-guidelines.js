@@ -7,7 +7,6 @@ import Wordmark from "../components/brand/Wordmark";
 import Display from "../components/brand-guidelines/Display";
 import Scale from "../components/brand-guidelines/Scale";
 import Font from "../components/brand-guidelines/Font";
-import Link from "gatsby-link";
 import Helmet from "react-helmet";
 
 import { rhythm, scale, options } from "../utils/typography";
@@ -15,14 +14,6 @@ import * as brand from "../utils/brand";
 
 class BrandGuidelines extends React.Component {
   render() {
-    const colors = brand.COLOR_PRIMARY;
-    const logoStyles = {
-      height: rhythm(5),
-      width: rhythm(5),
-      display: "flex",
-      justifyContent: "center",
-      alignItems: "center",
-    };
     const s = 3;
     return (
       <Layout>

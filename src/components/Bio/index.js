@@ -63,7 +63,9 @@ class Bio extends React.Component {
               fontStyle: "normal",
             }}
           >
-            ✉️ <a href="mailto:tobie@unlockopen.com">tobie@unlockopen.com</a>
+            <span role="img" aria-label="envelope">
+              ✉️ <a href="mailto:tobie@unlockopen.com">tobie@unlockopen.com</a>
+            </span>
           </p>
         </div>
       </div>

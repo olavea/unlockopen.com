@@ -2,9 +2,6 @@ import React from "react";
 import BasicLayout from "../components/BasicLayout";
 import Helmet from "react-helmet";
 
-import { rhythm, scale, options } from "../utils/typography";
-import * as brand from "../utils/brand";
-
 class Info extends React.Component {
   render() {
     return (

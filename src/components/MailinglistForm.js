@@ -1,7 +1,7 @@
 import React from "react";
-import Link from "gatsby-link";
-import { rhythm } from "../utils/typography";
-import css from "./mailinglist-form.css";
+// import Link from "gatsby-link";
+// import { rhythm } from "../utils/typography";
+// import css from "./mailinglist-form.css";
 
 class MailinglistForm extends React.Component {
   render() {

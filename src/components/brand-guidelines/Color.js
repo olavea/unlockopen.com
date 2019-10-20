@@ -8,7 +8,7 @@ class Color extends React.Component {
     const name = this.props.name;
     const color = this.props.color;
     const size = this.props.size || rhythm(1);
-    const scale = this.props.scale == "";
+    const scale = this.props.scale === "";
     const styles = factor => {
       let c = alpha(color, factor);
       return {

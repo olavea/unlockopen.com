@@ -1,14 +1,7 @@
 import Typography from "typography";
-import ms from "modularscale";
+
 import { MIN_DEFAULT_MEDIA_QUERY } from "typography-breakpoint-constants";
-import {
-  lighten,
-  COLOR_PRIMARY,
-  COLOR_SECONDARY,
-  COLOR_TERTIARY,
-  COLOR_QUARTERLY,
-  COLOR_BACKGROUND,
-} from "./brand";
+import { lighten, COLOR_PRIMARY } from "./brand";
 
 //const newFontSize = (value, ratio) => {
 //    const baseFont = options.baseFontSize.slice(0, -2)
@@ -61,17 +54,13 @@ const theme = {
     const small = scale(-1 / 5);
     const xSmall = scale(-1.5 / 5);
     const bodyFont = textify(options.bodyFontFamily);
-    const bodySerifFont = textify(["Merriweather", "serif"]);
+
     const aside = {
       fontFamily: bodyFont,
       fontWeight: options.bodyWeight,
       fontStyle: "italic",
     };
-    const alternate = {
-      ...adjustFontSizeTo(small),
-      fontFamily: bodySerifFont,
-      fontWeight: 400,
-    };
+
     const body = {
       fontFamily: bodyFont,
       fontWeight: options.bodyWeight,

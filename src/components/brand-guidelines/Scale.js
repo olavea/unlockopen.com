@@ -1,10 +1,10 @@
 import React from "react";
-import Link from "gatsby-link";
+// import Link from "gatsby-link";
 import { rhythm } from "../../utils/typography";
 
 class Scale extends React.Component {
   render() {
-    const style = this.props.style;
+    //    const style = this.props.style;
     const TITLE_TEXT = "The spectacle before us was indeed sublime.";
     const TEXT =
       "Apparently we had reached a great height in the atmosphere, for the sky was a dead black, and the stars had ceased to twinkle. By the same illusion which lifts the horizon of the sea to the level of the spectator on a hillside, the sable cloud beneath was dished out, and the car seemed to float in the middle of an immense dark sphere, whose upper half was strewn with silver. Looking down into the dark gulf below, I could see a ruddy light streaming through a rift in the clouds.";
