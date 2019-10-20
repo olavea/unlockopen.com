@@ -4,23 +4,19 @@ import BasicLayout from "./BasicLayout";
 import MailinglistForm from "./MailinglistForm";
 import Bio from "./Bio";
 
-class Layout extends React.Component {
-  render() {
-    const childrenOfMatryoshka = this.props.children;
-    let layoutBio = this.props.bio ? <Bio /> : null;
-    return (
-      <BasicLayout>
-        {childrenOfMatryoshka}
-        <MailinglistForm>
-          <p>
-            <strong>Intrigued? Want to know more?</strong>
-          </p>
-          <p>Subscribe to our mailing list.</p>
-        </MailinglistForm>
-        {layoutBio}
-      </BasicLayout>
-    );
-  }
-}
+const Layout = ({ displayBio, children }) => {
+  return (
+    <BasicLayout>
+      {children}
+      <MailinglistForm>
+        <p>
+          <strong>Intrigued? Want to know more?</strong>
+        </p>
+        <p>Subscribe to our mailing list.</p>
+      </MailinglistForm>
+      {displayBio && <Bio />}
+    </BasicLayout>
+  );
+};
 
 export default Layout;
