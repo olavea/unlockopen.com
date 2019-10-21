@@ -5,7 +5,7 @@ import Layout from "../components/Layout";
 export default ({ data }) => {
   const post = data.markdownRemark;
   return (
-    <Layout>
+    <Layout displayBio={post.frontmatter.bio}>
       <div>
         <h1>{post.frontmatter.title}</h1>
         <div dangerouslySetInnerHTML={{ __html: post.html }} />
@@ -14,12 +14,20 @@ export default ({ data }) => {
   );
 };
 
+// The bio should be shown for the markdown pages
+// where post.fields.bio is true. To do this you
+// need to get the "bio"-field with graphql
+// (look at commeted out code) and then pass it to
+// the layout component
+// </Layout>
+
 export const query = graphql`
   query($slug: String!) {
     markdownRemark(fields: { slug: { eq: $slug } }) {
       html
       frontmatter {
         title
+        bio
       }
     }
   }
