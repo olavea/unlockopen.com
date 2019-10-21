@@ -28,18 +28,18 @@ const Layout = ({ displayBio, displayMailinglistForm, children }) => {
         }}
       >
         {children}
+
+        {displayMailinglistForm && (
+          <MailinglistForm>
+            <p>
+              <strong>Intrigued? Want to know more?</strong>
+            </p>
+            <p>Subscribe to our mailing list.</p>
+          </MailinglistForm>
+        )}
+
+        {displayBio && <Bio />}
       </div>
-
-      {displayMailinglistForm && (
-        <MailinglistForm>
-          <p>
-            <strong>Intrigued? Want to know more?</strong>
-          </p>
-          <p>Subscribe to our mailing list.</p>
-        </MailinglistForm>
-      )}
-
-      {displayBio && <Bio />}
 
       <Footer
         style={{
