@@ -5,54 +5,54 @@ import Logomark from "./Logomark";
 import { rhythm } from "../../utils/typography";
 import * as brand from "../../utils/brand";
 
-class Logo extends React.Component {
-  render() {
-    const to = this.props.to;
-    const size = this.props.size || 1;
-    const colors = [
-      brand.WORDMARK_FONT_COLOR_UNLOCK,
-      brand.WORDMARK_FONT_COLOR_OPEN,
-    ];
-    if (this.props.colors) {
-      colors[0] = this.props.colors[0] || colors[0];
-      colors[1] = this.props.colors[1] || colors[1];
-    } else if (this.props.color) {
-      colors[0] = this.props.color;
-      colors[1] = this.props.color;
-    }
-
-    const style = {
-      ...this.props.style,
-      display: "flex",
-    };
-
-    const lm = (
-      <Logomark
-        size={size}
-        style={{
-          marginRight: rhythm(size / 4),
-          paddingBottom: `calc(${rhythm(3 / 10)} - 5px)`,
-        }}
-      />
-    );
-    const wm = <Wordmark size={size} style={{ fontSize: `${size}rem` }} />;
-    return to ? (
-      <Link
-        style={{
-          textDecoration: "none",
-          "&:hover": { background: "transparent" },
-          ...style,
-        }}
-        to={to}
-      >
-        {lm} {wm}
-      </Link>
-    ) : (
-      <span style={style}>
-        {lm} {wm}
-      </span>
-    );
+// class Logo extends React.Component {
+function Logo(props) {
+  // render() {
+  const to = props.to;
+  const size = props.size || 1;
+  const colors = [
+    brand.WORDMARK_FONT_COLOR_UNLOCK,
+    brand.WORDMARK_FONT_COLOR_OPEN,
+  ];
+  if (props.colors) {
+    colors[0] = props.colors[0] || colors[0];
+    colors[1] = props.colors[1] || colors[1];
+  } else if (props.color) {
+    colors[0] = props.color;
+    colors[1] = props.color;
   }
+
+  const style = {
+    ...props.style,
+    display: "flex",
+  };
+
+  const lm = (
+    <Logomark
+      size={size}
+      style={{
+        marginRight: rhythm(size / 4),
+        paddingBottom: `calc(${rhythm(3 / 10)} - 5px)`,
+      }}
+    />
+  );
+  const wm = <Wordmark size={size} style={{ fontSize: `${size}rem` }} />;
+  return to ? (
+    <Link
+      style={{
+        textDecoration: "none",
+        "&:hover": { background: "transparent" },
+        ...style,
+      }}
+      to={to}
+    >
+      {lm} {wm}
+    </Link>
+  ) : (
+    <span style={style}>
+      {lm} {wm}
+    </span>
+  );
 }
 
 export default Logo;

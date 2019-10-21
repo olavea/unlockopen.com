@@ -1,17 +1,17 @@
 import React from "react";
 import PropTypes from "prop-types";
 
-class ArticleReader extends React.Component {
-  render() {
-    const reader = this.props.reader;
+// class ArticleReader extends React.Component {
+//   render() {
+function ArticleTitle(props) {
+  const reader = props.reader;
 
-    if (typeof reader == "string") {
-      return <span>{reader}</span>;
-    }
-
-    const href = reader.url || reader.twitter;
-    return <a href={href}>{reader.name}</a>;
+  if (typeof reader == "string") {
+    return <span>{reader}</span>;
   }
+
+  const href = reader.url || reader.twitter;
+  return <a href={href}>{reader.name}</a>;
 }
 ArticleReader.propTypes = {
   reader: PropTypes.object.isRequired, // or string
@@ -19,7 +19,7 @@ ArticleReader.propTypes = {
 class ArticleReaders extends React.Component {
   render() {
     const items = [];
-    const readers = this.props.readers;
+    const readers = props.readers;
 
     switch (readers.length) {
       case 0:

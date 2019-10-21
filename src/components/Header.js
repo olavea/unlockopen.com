@@ -4,16 +4,16 @@ import React from "react";
 import Logo from "./brand/Logo";
 import { rhythm } from "../utils/typography";
 
-class Header extends React.Component {
-  render() {
-    return (
-      <header>
-        <h1 style={{ paddingTop: rhythm(1), textAlign: "center" }}>
-          <Logo size={1} to={"/"} />
-        </h1>
-      </header>
-    );
-  }
+// class Header extends React.Component {
+//   render() {
+function Header() {
+  return (
+    <header>
+      <h1 style={{ paddingTop: rhythm(1), textAlign: "center" }}>
+        <Logo size={1} to={"/"} />
+      </h1>
+    </header>
+  );
 }
 
 export default Header;
