@@ -1,12 +1,12 @@
 import React from "react";
-import BasicLayout from "../components/BasicLayout";
+import Layout from "../components/Layout";
 import Helmet from "react-helmet";
 
 function Info() {
   // class Info extends React.Component {
   //   render() {
   return (
-    <BasicLayout>
+    <Layout>
       <Helmet title="UnlockOpen LLC Info" />
 
       <h1>UnlockOpen LLC</h1>
@@ -124,7 +124,7 @@ function Info() {
           <td> CH77 0024 0240 8555 6260 E</td>
         </tr>
       </table>
-    </BasicLayout>
+    </Layout>
   );
 }
 

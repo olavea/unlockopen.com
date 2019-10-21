@@ -7,13 +7,14 @@ import { rhythm } from "../utils/typography";
 import MailinglistForm from "./MailinglistForm";
 import Bio from "./Bio";
 
-const Layout = ({ displayBio, children }) => {
+const Layout = ({ displayBio, displayMailinglistForm, children }) => {
   return (
     <div>
       <Helmet>
         <html lang="en" />
         <meta charSet="utf-8" />
       </Helmet>
+
       <Header />
 
       <div
@@ -29,13 +30,17 @@ const Layout = ({ displayBio, children }) => {
         {children}
       </div>
 
-      <MailinglistForm>
-        <p>
-          <strong>Intrigued? Want to know more?</strong>
-        </p>
-        <p>Subscribe to our mailing list.</p>
-      </MailinglistForm>
+      {displayMailinglistForm && (
+        <MailinglistForm>
+          <p>
+            <strong>Intrigued? Want to know more?</strong>
+          </p>
+          <p>Subscribe to our mailing list.</p>
+        </MailinglistForm>
+      )}
+
       {displayBio && <Bio />}
+
       <Footer
         style={{
           marginLeft: "auto",

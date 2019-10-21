@@ -5,7 +5,7 @@ import Layout from "../components/Layout";
 export default ({ data }) => {
   const post = data.markdownRemark;
   return (
-    <Layout displayBio={post.frontmatter.bio}>
+    <Layout displayBio={post.frontmatter.bio} displayMailinglistForm={true}>
       <div>
         <h1>{post.frontmatter.title}</h1>
         <div dangerouslySetInnerHTML={{ __html: post.html }} />
