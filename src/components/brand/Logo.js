@@ -6,7 +6,7 @@ import { rhythm } from "../../utils/typography";
 import * as brand from "../../utils/brand";
 
 // class Logo extends React.Component {
-function Logo(props) {
+const Logo = ({ to, size, colors, style }) => {
   // render() {
   const to = props.to;
   const size = props.size || 1;
@@ -53,7 +53,7 @@ function Logo(props) {
       {lm} {wm}
     </span>
   );
-}
+};
 
 export default Logo;
 

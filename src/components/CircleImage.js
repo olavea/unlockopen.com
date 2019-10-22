@@ -3,18 +3,21 @@ import { rhythm } from "../utils/typography";
 
 // class CircleImage extends React.Component {
 //   render() {
-function CircleImage(props) {
-  const src = props.src;
-  const alt = props.alt;
-  const size = rhythm(props.size || 1);
-  const style = props.style || {};
-  const boxShadow = props.shadow || "inset 0 0 3px #666";
+const CircleImage = ({
+  src,
+  alt,
+  size = 1,
+  shadow = "inset 0 0 3px #666",
+  style = {},
+}) => {
+  const dimension = rhythm(size);
+
   return (
     <div
       style={{
         ...style,
-        height: size,
-        width: size,
+        height: dimension,
+        width: dimension,
         position: "relative",
       }}
     >
@@ -25,8 +28,8 @@ function CircleImage(props) {
         style={{
           padding: 0,
           margin: 0,
-          width: size,
-          height: size,
+          width: dimension,
+          height: dimension,
           borderRadius: "100%",
         }}
       />
@@ -35,9 +38,9 @@ function CircleImage(props) {
           position: "absolute",
           width: "100%",
           height: "100%",
-          MozBoxShadow: boxShadow,
-          WebkitBoxShadow: boxShadow,
-          boxShadow: boxShadow,
+          MozBoxShadow: shadow,
+          WebkitBoxShadow: shadow,
+          boxShadow: shadow,
           borderRadius: "100%",
           top: 0,
           left: 0,
@@ -45,6 +48,6 @@ function CircleImage(props) {
       />
     </div>
   );
-}
+};
 
 export default CircleImage;

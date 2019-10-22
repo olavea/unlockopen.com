@@ -6,13 +6,11 @@ import SEO from "../components/SEo";
 export default ({ data }) => {
   const post = data.markdownRemark;
   return (
-    <Layout displayBio={post.frontmatter.bio}>
-      <SEO title={post.frontmatter.title} description={post.excerpt}>
-        <div>
-          <h1>{post.frontmatter.title}</h1>
-          <div dangerouslySetInnerHTML={{ __html: post.html }} />
-        </div>
-      </SEO>
+    <Layout displayBio={post.frontmatter.bio} displayMailinglistForm={true}>
+      <div>
+        <h1>{post.frontmatter.title}</h1>
+        <div dangerouslySetInnerHTML={{ __html: post.html }} />
+      </div>
     </Layout>
   );
 };

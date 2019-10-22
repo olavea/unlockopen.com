@@ -8,13 +8,14 @@ import MailinglistForm from "./MailinglistForm";
 import Bio from "./Bio";
 import SEO from "./SEo";
 
-const Layout = ({ title, description, displayBio, children }) => {
+const Layout = ({ displayBio, displayMailinglistForm, children }) => {
   return (
     <div>
       <Helmet>
         <html lang="en" />
         <meta charSet="utf-8" />
       </Helmet>
+
       <Header />
 
       <div
@@ -28,15 +29,19 @@ const Layout = ({ title, description, displayBio, children }) => {
         }}
       >
         {children}
+
+        {displayMailinglistForm && (
+          <MailinglistForm>
+            <p>
+              <strong>Intrigued? Want to know more?</strong>
+            </p>
+            <p>Subscribe to our mailing list.</p>
+          </MailinglistForm>
+        )}
+
+        {displayBio && <Bio />}
       </div>
 
-      <MailinglistForm>
-        <p>
-          <strong>Intrigued? Want to know more?</strong>
-        </p>
-        <p>Subscribe to our mailing list.</p>
-      </MailinglistForm>
-      {displayBio && <Bio />}
       <Footer
         style={{
           marginLeft: "auto",
