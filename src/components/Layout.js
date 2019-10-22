@@ -6,8 +6,9 @@ import ColorLine from "./ColorLine";
 import { rhythm } from "../utils/typography";
 import MailinglistForm from "./MailinglistForm";
 import Bio from "./Bio";
+import SEO from "./SEo";
 
-const Layout = ({ displayBio, children }) => {
+const Layout = ({ title, description, displayBio, children }) => {
   return (
     <div>
       <Helmet>

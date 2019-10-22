@@ -1,15 +1,18 @@
 import React from "react";
 import { graphql } from "gatsby";
 import Layout from "../components/Layout";
+import SEO from "../components/SEo";
 
 export default ({ data }) => {
   const post = data.markdownRemark;
   return (
     <Layout displayBio={post.frontmatter.bio}>
-      <div>
-        <h1>{post.frontmatter.title}</h1>
-        <div dangerouslySetInnerHTML={{ __html: post.html }} />
-      </div>
+      <SEO title={post.frontmatter.title} description={post.excerpt}>
+        <div>
+          <h1>{post.frontmatter.title}</h1>
+          <div dangerouslySetInnerHTML={{ __html: post.html }} />
+        </div>
+      </SEO>
     </Layout>
   );
 };
