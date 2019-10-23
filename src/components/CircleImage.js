@@ -1,8 +1,6 @@
 import React from "react";
 import { rhythm } from "../utils/typography";
 
-// class CircleImage extends React.Component {
-//   render() {
 const CircleImage = ({
   src,
   alt,

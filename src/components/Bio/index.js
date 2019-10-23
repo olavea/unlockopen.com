@@ -1,14 +1,9 @@
 import React from "react";
 import profilePic from "./IMG_3420.jpg";
-//import bio from './bio.md'
 import { rhythm } from "../../utils/typography";
-// import { MIN_DEFAULT_MEDIA_QUERY } from "typography-breakpoint-constants";
 import CircleImage from "../CircleImage";
 
-// class Bio extends React.Component {
-//   render() {
-//     const author = this.props.author;
-function Bio(props) {
+const Bio = author => {
   return (
     <div
       className="contrast"
@@ -27,7 +22,7 @@ function Bio(props) {
       >
         <CircleImage
           src={profilePic}
-          alt={props.author}
+          alt={author}
           size={4}
           style={{
             margin: `0 auto ${rhythm(1)} auto`,
@@ -38,6 +33,7 @@ function Bio(props) {
           <p>Principal, UnlockOpen</p>
         </header>
       </div>
+
       <div style={{}}>
         <p>
           Tobie Langel helps organizations understand and leverage open source
@@ -70,6 +66,6 @@ function Bio(props) {
       </div>
     </div>
   );
-}
+};
 
 export default Bio;

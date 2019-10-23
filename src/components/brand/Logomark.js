@@ -2,18 +2,14 @@ import React from "react";
 import { rhythm } from "../../utils/typography";
 import * as brand from "../../utils/brand";
 
-// class Logomark extends React.Component {
-//   render() {
-function Logomark(props) {
-  const color = props.color;
-  const style = props.style;
-  const size = rhythm(props.size || 1);
+const Logomark = ({ color, style, size }) => {
+  const Size = rhythm(size || 1);
   return (
     <svg
       style={{
         ...style,
-        height: size,
-        width: size,
+        height: Size,
+        width: Size,
       }}
       xmlns="http://www.w3.org/2000/svg"
       x="0px"
@@ -40,6 +36,6 @@ function Logomark(props) {
       </g>
     </svg>
   );
-}
+};
 
 export default Logomark;

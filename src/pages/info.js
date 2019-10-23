@@ -2,9 +2,7 @@ import React from "react";
 import Layout from "../components/Layout";
 import Helmet from "react-helmet";
 
-function Info() {
-  // class Info extends React.Component {
-  //   render() {
+const Info = () => {
   return (
     <Layout>
       <Helmet title="UnlockOpen LLC Info" />
@@ -126,6 +124,6 @@ function Info() {
       </table>
     </Layout>
   );
-}
+};
 
 export default Info;

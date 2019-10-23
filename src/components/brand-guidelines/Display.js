@@ -3,9 +3,9 @@ import { rhythm } from "../../utils/typography";
 
 // class Display extends React.Component {
 //   render() {
-function Display(props) {
-  const color = props.color || "inherit";
-  const children = props.children;
+const Display = ({ color, children }) => {
+  const Color = color || "inherit";
+  // const children = props.children;
   const styles = {
     height: "100%",
     width: "100%",
@@ -13,9 +13,9 @@ function Display(props) {
     display: "flex",
     justifyContent: "center",
     alignItems: "center",
-    backgroundColor: color,
+    backgroundColor: Color,
   };
   return <div style={styles}>{children}</div>;
-}
+};
 
 export default Display;

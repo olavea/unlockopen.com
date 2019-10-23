@@ -3,18 +3,15 @@ import { alpha } from "../../utils/brand";
 import { rhythm } from "../../utils/typography";
 import createColor from "color";
 
-// class Color extends React.Component {
-function Color(props) {
-  // render() {
-  const name = props.name;
-  const color = props.color;
-  const size = props.size || rhythm(1);
-  const scale = props.scale === "";
+const Color = ({ name, colors, size, scale }) => {
+  const Size = size || rhythm(1);
+  const Scale = scale === "";
+
   const styles = factor => {
-    let c = alpha(color, factor);
+    let c = alpha(colors, factor);
     return {
-      width: size,
-      height: size,
+      width: Size,
+      height: Size,
       textAlign: "center",
       backgroundColor: c,
       color: createColor(c).isLight() ? "#000" : "#fff",
@@ -26,14 +23,14 @@ function Color(props) {
       style={{
         display: "grid",
         columnGap: rhythm(1 / 2),
-        gridTemplateColumns: `50% ${size} ${size} ${size} ${size} ${size} ${size} ${size}`,
+        gridTemplateColumns: `50% ${Size} ${Size} ${Size} ${Size} ${Size} ${Size} ${Size}`,
       }}
     >
       <p>
-        {name} ({color})
+        {name} ({colors})
       </p>
-      <div style={{ backgroundColor: color, width: size, height: size }}></div>
-      {scale
+      <div style={{ backgroundColor: colors, width: Size, height: Size }}></div>
+      {Scale
         ? [
             <div style={styles(0)}>
               <small>1</small>
@@ -57,6 +54,6 @@ function Color(props) {
         : null}
     </div>
   );
-}
+};
 
 export default Color;

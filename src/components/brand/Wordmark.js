@@ -5,24 +5,24 @@ import * as brand from "../../utils/brand";
 
 // class Wordmark extends React.Component {
 //   render() {
-function Wordmark(props) {
-  const size = props.size || 1;
-  const to = props.to;
-  const colors = [
+const Wordmark = ({ size, to, colors, style }) => {
+  const Size = size || 1;
+
+  const Colors = [
     brand.WORDMARK_FONT_COLOR_UNLOCK,
     brand.WORDMARK_FONT_COLOR_OPEN,
   ];
-  if (props.colors) {
-    colors[0] = props.colors[0] || colors[0];
-    colors[1] = props.colors[1] || colors[1];
-  } else if (props.color) {
-    colors[0] = props.color;
-    colors[1] = props.color;
+  if (colors) {
+    Colors[0] = colors[0] || Colors[0];
+    Colors[1] = colors[1] || Colors[1];
+  } else if (colors) {
+    Colors[0] = colors;
+    Colors[1] = colors;
   }
-  const style = {
-    ...scale(size - 1),
-    lineHeight: rhythm(size),
-    ...props.style,
+  const Style = {
+    ...scale(Size - 1),
+    lineHeight: rhythm(Size),
+    ...style,
     fontFamily: brand.WORDMARK_FONT_FAMILY,
     textDecoration: "none",
   };
@@ -30,7 +30,7 @@ function Wordmark(props) {
   const name = [
     <span
       style={{
-        color: colors[0],
+        color: Colors[0],
         fontWeight: brand.WORDMARK_FONT_WEIGHT_UNLOCK,
         textTransform: "uppercase",
       }}
@@ -39,7 +39,7 @@ function Wordmark(props) {
     </span>,
     <span
       style={{
-        color: colors[1],
+        color: Colors[1],
         fontWeight: brand.WORDMARK_FONT_WEIGHT_OPEN,
         textTransform: "uppercase",
       }}
@@ -52,16 +52,16 @@ function Wordmark(props) {
       style={{
         textDecoration: "none",
         "&:hover": { background: "transparent" },
-        style,
+        Style,
       }}
       to={to}
     >
       {name}
     </Link>
   ) : (
-    <span style={style}>{name}</span>
+    <span style={Style}>{name}</span>
   );
-}
+};
 
 export default Wordmark;
 

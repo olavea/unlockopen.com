@@ -1,12 +1,7 @@
 import React from "react";
-// import Link from "gatsby-link";
-// import { rhythm } from "../utils/typography";
 import "./mailinglist-form.css";
 
-function MailinglistForm(props) {
-  // class MailinglistForm extends React.Component {
-  //   render() {
-  // const children = props.children;
+const MailinglistForm = ({ children }) => {
   return (
     <div>
       <script src="https://f.convertkit.com/ckjs/ck.5.js"></script>
@@ -21,7 +16,7 @@ function MailinglistForm(props) {
         data-options='{"settings":{"after_subscribe":{"action":"message","redirect_url":"","success_message":"Success! Now check your email to confirm your subscription."},"return_visitor":{"action":"hide","custom_content":"Thank you for subscribing to the mailing list. You should have received an email confirmation already!"},"recaptcha":{"enabled":false}}}'
         min-width="400 500 600 700 800"
       >
-        {props.children}
+        {children}
         <div data-style="clean">
           <ul
             className="formkit-alert formkit-alert-error"
@@ -83,6 +78,6 @@ function MailinglistForm(props) {
       </form>
     </div>
   );
-}
+};
 
 export default MailinglistForm;

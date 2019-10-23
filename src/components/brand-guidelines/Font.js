@@ -1,15 +1,7 @@
 import React from "react";
-// import Link from "gatsby-link";
 import { rhythm } from "../../utils/typography";
 
-// class Font extends React.Component {
-//   render() {
-function Font(props) {
-  const name = props.name;
-  const style = props.style;
-  const fontFamily = props.fontFamily;
-  const fontColor = props.fontColor;
-  const fontWeight = props.fontWeight;
+const Font = ({ name, style, fontFamily, fontColor, fontWeight }) => {
   const CHARACTERS =
     "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz1234567890‘?’“!”(%)[#]{@}/&<-+÷×=>®©$€£¥¢:;,.*)";
   return (
@@ -41,6 +33,6 @@ function Font(props) {
       </p>
     </div>
   );
-}
+};
 
 export default Font;

@@ -8,12 +8,10 @@ import Display from "../components/brand-guidelines/Display";
 import Scale from "../components/brand-guidelines/Scale";
 import Font from "../components/brand-guidelines/Font";
 import Helmet from "react-helmet";
-
 import { rhythm, scale, options } from "../utils/typography";
 import * as brand from "../utils/brand";
-function BrandGuidelines() {
-  // class BrandGuidelines extends React.Component {
-  // render() {
+
+const BrandGuidelines = () => {
   const s = 3;
   return (
     <Layout>
@@ -22,16 +20,7 @@ function BrandGuidelines() {
       <h1>Brand Guidelines</h1>
 
       <h2>Logo</h2>
-      <div
-        style={
-          {
-            //display: "grid",
-            //columnGap: rhythm(1/2),
-            //rowGap: rhythm(1/2),
-            //gridTemplateColumns: "1fr",
-          }
-        }
-      >
+      <div>
         <Display>
           <Logo size={1} />
         </Display>
@@ -192,6 +181,6 @@ function BrandGuidelines() {
       </div>
     </Layout>
   );
-}
+};
 
 export default BrandGuidelines;
