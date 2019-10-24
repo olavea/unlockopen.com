@@ -2,6 +2,10 @@ import React from "react";
 import Layout from "../components/Layout";
 import Helmet from "react-helmet";
 
+// Is not working
+// <Helmet title="UnlockOpen |
+// How do I debugg? 🐛 :lady-bug
+
 const NotFoundPage = () => (
   <Layout>
     <Helmet title="UnlockOpen | Page Not Found" />

@@ -6,7 +6,7 @@ import * as brand from "../../utils/brand";
 // class Wordmark extends React.Component {
 //   render() {
 const Wordmark = ({ size, to, colors, style }) => {
-  const Size = size || 1;
+  const somethingSomethingSize = size || 1;
 
   const Colors = [
     brand.WORDMARK_FONT_COLOR_UNLOCK,
@@ -20,8 +20,8 @@ const Wordmark = ({ size, to, colors, style }) => {
     Colors[1] = colors;
   }
   const Style = {
-    ...scale(Size - 1),
-    lineHeight: rhythm(Size),
+    ...scale(somethingSomethingSize - 1),
+    lineHeight: rhythm(somethingSomethingSize),
     ...style,
     fontFamily: brand.WORDMARK_FONT_FAMILY,
     textDecoration: "none",

@@ -12,7 +12,7 @@ import { rhythm, scale, options } from "../utils/typography";
 import * as brand from "../utils/brand";
 
 const BrandGuidelines = () => {
-  const s = 3;
+  const somethingSomethingS = 3;
   return (
     <Layout>
       <Helmet title="Brand Guidelines" />
@@ -48,28 +48,28 @@ const BrandGuidelines = () => {
         }}
       >
         <Display>
-          <Logomark size={s} />
+          <Logomark size={somethingSomethingS} />
         </Display>
         <Display color="#000">
-          <Logomark size={s} />
+          <Logomark size={somethingSomethingS} />
         </Display>
         <Display>
-          <Logomark color="#000" size={s} />
+          <Logomark color="#000" size={somethingSomethingS} />
         </Display>
         <Display color="#000">
-          <Logomark color="#fff" size={s} />
+          <Logomark color="#fff" size={somethingSomethingS} />
         </Display>
         <Display>
-          <Logomark size={s} color={brand.COLOR_PRIMARY} />
+          <Logomark size={somethingSomethingS} color={brand.COLOR_PRIMARY} />
         </Display>
         <Display>
-          <Logomark size={s} color={brand.COLOR_SECONDARY} />
+          <Logomark size={somethingSomethingS} color={brand.COLOR_SECONDARY} />
         </Display>
         <Display>
-          <Logomark size={s} color={brand.COLOR_TERTIARY} />
+          <Logomark size={somethingSomethingS} color={brand.COLOR_TERTIARY} />
         </Display>
         <Display>
-          <Logomark size={s} color={brand.COLOR_QUARTERLY} />
+          <Logomark size={somethingSomethingS} color={brand.COLOR_QUARTERLY} />
         </Display>
       </div>
 

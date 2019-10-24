@@ -3,13 +3,13 @@ import { rhythm } from "../../utils/typography";
 import * as brand from "../../utils/brand";
 
 const Logomark = ({ color, style, size }) => {
-  const Size = rhythm(size || 1);
+  const svgSize = rhythm(size || 1);
   return (
     <svg
       style={{
         ...style,
-        height: Size,
-        width: Size,
+        height: svgSize,
+        width: svgSize,
       }}
       xmlns="http://www.w3.org/2000/svg"
       x="0px"

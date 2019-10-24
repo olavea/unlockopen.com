@@ -5,19 +5,19 @@ import Logomark from "./Logomark";
 import { rhythm } from "../../utils/typography";
 import * as brand from "../../utils/brand";
 
-const Logo = ({ to, style, size, colors }) => {
-  const Size = size || 1;
-  const Colors = [
+const Logo = ({ to, style, size, colors, color }) => {
+  const appliedSize = size || 1;
+  const appliedColors = [
     brand.WORDMARK_FONT_COLOR_UNLOCK,
     brand.WORDMARK_FONT_COLOR_OPEN,
   ];
 
   if (colors) {
-    Colors[0] = Colors[0] || Colors[0];
-    Colors[1] = Colors[1] || Colors[1];
-  } else if (colors) {
-    Colors[0] = colors;
-    Colors[1] = colors;
+    appliedColors[0] = colors[0] || appliedColors[0];
+    appliedColors[1] = colors[1] || appliedColors[1];
+  } else if (color) {
+    appliedColors[0] = color;
+    appliedColors[1] = color;
   }
 
   const Style = {
@@ -27,14 +27,16 @@ const Logo = ({ to, style, size, colors }) => {
 
   const lm = (
     <Logomark
-      size={Size}
+      size={appliedSize}
       style={{
-        marginRight: rhythm(Size / 4),
+        marginRight: rhythm(appliedSize / 4),
         paddingBottom: `calc(${rhythm(3 / 10)} - 5px)`,
       }}
     />
   );
-  const wm = <Wordmark size={Size} style={{ fontSize: `${Size}rem` }} />;
+  const wm = (
+    <Wordmark size={appliedSize} style={{ fontSize: `${appliedSize}rem` }} />
+  );
   return to ? (
     <Link
       style={{
