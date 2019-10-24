@@ -1,12 +1,16 @@
 import React from "react";
 import { graphql } from "gatsby";
 import Layout from "../components/Layout";
-import SEO from "../components/SEo";
 
 export default ({ data }) => {
   const post = data.markdownRemark;
   return (
-    <Layout displayBio={post.frontmatter.bio} displayMailinglistForm={true}>
+    <Layout
+      displayBio={post.frontmatter.bio}
+      displayMailinglistForm={true}
+      title={post.frontmatter.title}
+      description={post.excerpt}
+    >
       <div>
         <h1>{post.frontmatter.title}</h1>
         <div dangerouslySetInnerHTML={{ __html: post.html }} />
@@ -26,6 +30,7 @@ export const query = graphql`
   query($slug: String!) {
     markdownRemark(fields: { slug: { eq: $slug } }) {
       html
+      excerpt
       frontmatter {
         title
         bio

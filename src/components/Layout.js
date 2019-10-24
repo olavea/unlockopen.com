@@ -8,12 +8,19 @@ import MailinglistForm from "./MailinglistForm";
 import Bio from "./Bio";
 import SEO from "./SEo";
 
-const Layout = ({ displayBio, displayMailinglistForm, children }) => {
+const Layout = ({
+  title,
+  description,
+  displayBio,
+  displayMailinglistForm,
+  children,
+}) => {
   return (
     <div>
       <Helmet>
         <html lang="en" />
         <meta charSet="utf-8" />
+        <SEO title={title} description={description} />
       </Helmet>
 
       <Header />
